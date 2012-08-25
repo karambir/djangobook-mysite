@@ -32,6 +32,46 @@
         <div id="content">
         {% block content %}{% endblock %}
         </div>
-        {% block style %}{% endblock %}
+        {% block style %}
+        <style>
+        body {
+	font-family:Arial;
+	font-size:100%;
+	text-decoration:none;
+}
+
+#header {
+	margin: 20px;
+	padding-bottom: 20px;
+}
+
+#header ul {	
+	color:red;
+}
+
+a, a:visited {
+	text-decoration:none;
+	color:red;
+	padding:0;
+	margin:0;
+	font-size:1.4em;
+}
+
+a:hover {
+	color:#ff2222;
+}
+
+#header ul {
+	list-style:none;
+	display:inline;
+}
+
+#header ul li {
+	display: inline;
+	padding:10px 10px;
+	border: double black 1px;
+}
+        </style>
+{% endblock style %}
     </body>
 </html>
