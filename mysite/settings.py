@@ -3,7 +3,7 @@
 import os
 
 DEBUG = False
-TEMPLATE_DEBUG = DEBUG
+TEMPLATE_DEBUG = True
 
 ADMINS = (
      ('Karambir Singh Nain', 'akarambir@gmail.com'),
