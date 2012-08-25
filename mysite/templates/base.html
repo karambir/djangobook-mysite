@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv = "X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>{{ page_title }}</title>
+        <title>{% block title %}{% endblock %}</title>
         <meta name='description' content="{{ page_desc }}">
         <link rel="stylesheet" href="/static/style.css">
 	 
@@ -50,10 +50,13 @@
 }
 
 a, a:visited {
+    color:red;
+    padding:0;
 	text-decoration:none;
-	color:red;
-	padding:0;
-	margin:0;
+    margin:0;
+}
+
+#nav a,#nav a:visited {
 	font-size:1.4em;
 }
 
@@ -70,6 +73,10 @@ a:hover {
 	display: inline;
 	padding:10px 10px;
 	border: double black 1px;
+}
+#content {
+	padding:10px 10px;
+	border: black 1px;
 }
         </style>
 {% endblock style %}
