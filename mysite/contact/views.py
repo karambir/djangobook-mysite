@@ -4,8 +4,8 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render_to_response
 from contact.models import ContactForm
 from django.template import RequestContext, Context
-from django import newforms as forms
-from django.newforms.widgets import *
+from django import forms
+from django.forms.widgets import *
 from django.core.mail import send_mail, BadHeaderError
 
 def contactview(request):
