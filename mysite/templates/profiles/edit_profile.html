@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Edit Profile{% endblock %}
- 
-{% block content %}
-<h1>Edit profile of {{ user }}</h1>
+{% block heading %}Edit profile of {{ user }}{% endblock %}
+
+<h1></h1>
 
 <form action="" method="POST">{% csrf_token %}{{ form }} <input id="submit" type="submit" name="submit" value="Update" /></form>
  

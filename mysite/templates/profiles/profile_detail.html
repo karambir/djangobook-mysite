@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block title %}{{ user }} Profile{% endblock %}
- 
+ {% block heading %}Profile Details of {{ user }}{% endblock %}
 {% block content %}
-<h1>Profile Details for {{ user }}</h1>
 
 <p>Name: {{profile.first_name}} {{profile.last_name}}</p>
 <p></p>
@@ -10,6 +9,6 @@
 <strong>College Info</strong>
 <p>Name: {{profile.college}}</p>
 <p>Address: {{profile.college.address}}</p>
-<p>Name: {{profile.college.estd}}</p>
+<p>Established: {{profile.college.estd}}</p>
 {% endblock content %}
 
