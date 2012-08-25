@@ -2,7 +2,7 @@
 #from registration_defaults.settings import *
 import os
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
