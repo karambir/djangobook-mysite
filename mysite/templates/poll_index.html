@@ -1,0 +1,12 @@
+{% include 'header.html' %}
+
+<div id="poll">
+    <ul>
+        {% for poll in poll_list %}
+        <li>{{ poll.question }}</br></br></li>
+        {% endfor %}
+    </ul>
+
+</div>
+</body>
+</html>

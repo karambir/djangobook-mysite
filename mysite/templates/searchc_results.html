@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+
+<p>You searched for: <strong>{{ query }}</strong></p>
+
+{% if books %}
+    <p>Found {{ colleges|length }} college{{ colleges|pluralize }}.</p>
+    <ul>
+        {% for college in colleges %}
+        <li>{{ college.name }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No college matched your search criteria.</p>
+{% endif %}
+
+</body>
+</html>
