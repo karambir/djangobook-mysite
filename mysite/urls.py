@@ -9,17 +9,7 @@ from django.views.generic.simple import redirect_to
 from django.contrib import admin
 admin.autodiscover()
 
-from basic.books.models import *
-
-genre_list = {
-    'queryset': Genre.objects.all(),
-}
-publisher_list = {
-    'queryset': Publisher.objects.all(),
-}
-book_list = {
-    'queryset': Book.objects.all(),
-}
+#from basic.books.models import *
 
 
 urlpatterns = patterns('mysite.views',
@@ -73,35 +63,3 @@ urlpatterns += patterns('mysite.polls.views',
 )
 """
 
-urlpatterns += patterns('django.views.generic.list_detail',
-    url(r'^books/genres/(?P<slug>[-\w]+)/$',
-        view='object_detail',
-        kwargs=genre_list,
-        name='book_genre_detail',
-    ),
-    url (r'^books/genres/$',
-        view='object_list',
-        kwargs=genre_list,
-        name='book_genre_list',
-    ),
-    url(r'^books/publishers/(?P<slug>[-\w]+)/$',
-        view='object_detail',
-        kwargs=publisher_list,
-        name='book_publisher_detail',
-    ),
-    url (r'^books/publishers/$',
-        view='object_list',
-        kwargs=publisher_list,
-        name='book_publisher_list',
-    ),
-    url(r'^books/(?P<slug>[-\w]+)/$',
-        view='object_detail',
-        kwargs=book_list,
-        name='book_detail',
-    ),
-    url (r'^books/$',
-        view='object_list',
-        kwargs=book_list,
-        name='book_list',
-    ),
-)
