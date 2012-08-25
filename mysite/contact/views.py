@@ -15,7 +15,7 @@ def contactview(request):
 
 		if subject and message and from_email:
 		        try:
-					send_mail(subject, message, from_email, ['change@this.com'])
+					send_mail(subject, message, from_email, ['admin@codesters.org'])
         		except BadHeaderError:
             			return HttpResponse('Invalid header found.')
         		return HttpResponseRedirect('/contact/thankyou/')
