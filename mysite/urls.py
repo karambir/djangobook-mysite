@@ -33,12 +33,12 @@ urlpatterns = patterns('mysite.views',
     url(r'^admin/', include(admin.site.urls)),
 )
 
-"""
+
 urlpatterns += patterns('mysite.contact.views',
     (r'^contact/$', 'contactview'),
     (r'^contact/thankyou/$', 'thankyou'),
 )
-"""
+
 
 urlpatterns += patterns('mysite.books.views',
     (r'^search-form/$', 'search_form'),
