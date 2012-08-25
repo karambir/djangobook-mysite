@@ -2,7 +2,7 @@
 
 
 from django.conf.urls.defaults import *
-from basic.blog import views
+#from basic.blog import views
 #import satchmo_ext.productratings.models
 from registration.backends.default.urls import *
 from django.views.generic.simple import redirect_to
@@ -72,51 +72,6 @@ urlpatterns += patterns('mysite.polls.views',
     url(r'^polls/(?P<poll_id>\d+)/vote/$', 'polls.views.vote'),
 )
 """
-
-
-urlpatterns += patterns('basic.blog.views',
-    url(r'^blog/(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{1,2})/(?P<slug>[-\w]+)/$',
-        view='post_detail',
-        name='blog_detail'
-    ),
-    url(r'blog/^(?P<year>\d{4})/(?P<month>\w{3})/(?P<day>\d{1,2})/$',
-        view='post_archive_day',
-        name='blog_archive_day'
-    ),
-    url(r'^blog/(?P<year>\d{4})/(?P<month>\w{3})/$',
-        view='post_archive_month',
-        name='blog_archive_month'
-    ),
-    url(r'^blog/(?P<year>\d{4})/$',
-        view='post_archive_year',
-        name='blog_archive_year'
-    ),
-    url(r'^blog/categories/(?P<slug>[-\w]+)/$',
-        view='category_detail',
-        name='blog_category_detail'
-    ),
-    url (r'^blog/categories/$',
-        view='category_list',
-        name='blog_category_list'
-    ),
-    url(r'^blog/tags/(?P<slug>[-\w]+)/$',
-        view='tag_detail',
-        name='blog_tag_detail'
-    ),
-    url (r'^blog/search/$',
-        view='search',
-        name='blog_search'
-    ),
-    url(r'^blog/page/(?P<page>\d+)/$',
-        view='post_list',
-        name='blog_index_paginated'
-    ),
-    url(r'^blog/$',
-        view='post_list',
-        name='blog_index'
-    ),
-)
-
 
 urlpatterns += patterns('django.views.generic.list_detail',
     url(r'^books/genres/(?P<slug>[-\w]+)/$',
