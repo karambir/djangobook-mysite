@@ -137,9 +137,9 @@ INSTALLED_APPS = (
     #'mysite.polls',
     'mysite.musicians',
     'mysite.blogs',
-    'basic.inlines',
-    'basic.books',
-    'basic.people',
+    #'basic.inlines',
+    #'basic.books',
+    #'basic.people',
     'tagging',
     'django.contrib.markup',
 )
