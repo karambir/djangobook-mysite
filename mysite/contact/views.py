@@ -25,5 +25,5 @@ def contactview(request):
     return render_to_response('contacts.html', c, context_instance=RequestContext(request))
 
 def thankyou(request):
-		return render_to_response('thankyou.html')
+    return render_to_response('thankyou.html')
 
